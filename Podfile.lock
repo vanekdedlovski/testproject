@@ -1,0 +1,16 @@
+PODS:
+  - EmailValidator (1.0.2)
+
+DEPENDENCIES:
+  - EmailValidator
+
+SPEC REPOS:
+  trunk:
+    - EmailValidator
+
+SPEC CHECKSUMS:
+  EmailValidator: 366dc0ddedcc457ae14d269fa056416a6730d6ea
+
+PODFILE CHECKSUM: b99fbff3133a546e7a45e8c29fa7a43b83639d0a
+
+COCOAPODS: 1.11.2
