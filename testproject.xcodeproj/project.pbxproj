@@ -17,6 +17,10 @@
 		071741C127AE57AC0005B008 /* ModuleStructs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071741C027AE57AC0005B008 /* ModuleStructs.swift */; };
 		071741C427AE5E4D0005B008 /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 071741C327AE5E4D0005B008 /* Network.swift */; };
 		07185C1B27AE7E3200468C56 /* LauchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07185C1A27AE7E3200468C56 /* LauchScreen.swift */; };
+		0740144927AFC2250078737E /* OneItemScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0740144827AFC2250078737E /* OneItemScreen.swift */; };
+		075282EC27AFCCBA00AD827A /* GoogleAds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075282EB27AFCCBA00AD827A /* GoogleAds.swift */; };
+		075282EE27AFCF6500AD827A /* HistoryScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075282ED27AFCF6500AD827A /* HistoryScreen.swift */; };
+		075282F027AFCF7300AD827A /* OrderScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075282EF27AFCF7300AD827A /* OrderScreen.swift */; };
 		076BCF5327AE413D006BC1A7 /* testprojectApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076BCF5227AE413D006BC1A7 /* testprojectApp.swift */; };
 		076BCF5527AE413D006BC1A7 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 076BCF5427AE413D006BC1A7 /* ContentView.swift */; };
 		076BCF5727AE413E006BC1A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 076BCF5627AE413E006BC1A7 /* Assets.xcassets */; };
@@ -58,6 +62,10 @@
 		071741C027AE57AC0005B008 /* ModuleStructs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleStructs.swift; sourceTree = "<group>"; };
 		071741C327AE5E4D0005B008 /* Network.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		07185C1A27AE7E3200468C56 /* LauchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LauchScreen.swift; sourceTree = "<group>"; };
+		0740144827AFC2250078737E /* OneItemScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneItemScreen.swift; sourceTree = "<group>"; };
+		075282EB27AFCCBA00AD827A /* GoogleAds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleAds.swift; sourceTree = "<group>"; };
+		075282ED27AFCF6500AD827A /* HistoryScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryScreen.swift; sourceTree = "<group>"; };
+		075282EF27AFCF7300AD827A /* OrderScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderScreen.swift; sourceTree = "<group>"; };
 		076BCF4F27AE413D006BC1A7 /* testproject.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = testproject.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		076BCF5227AE413D006BC1A7 /* testprojectApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = testprojectApp.swift; sourceTree = "<group>"; };
 		076BCF5427AE413D006BC1A7 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -117,6 +125,9 @@
 				071741B227AE438D0005B008 /* SignUpScreen.swift */,
 				071741B427AE439A0005B008 /* MainScreen.swift */,
 				07185C1A27AE7E3200468C56 /* LauchScreen.swift */,
+				0740144827AFC2250078737E /* OneItemScreen.swift */,
+				075282ED27AFCF6500AD827A /* HistoryScreen.swift */,
+				075282EF27AFCF7300AD827A /* OrderScreen.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -126,6 +137,7 @@
 			children = (
 				071741B827AE47FF0005B008 /* ViewModule.swift */,
 				071741C327AE5E4D0005B008 /* Network.swift */,
+				075282EB27AFCCBA00AD827A /* GoogleAds.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -479,8 +491,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				075282F027AFCF7300AD827A /* OrderScreen.swift in Sources */,
 				071741B527AE439A0005B008 /* MainScreen.swift in Sources */,
 				071741B327AE438D0005B008 /* SignUpScreen.swift in Sources */,
+				0740144927AFC2250078737E /* OneItemScreen.swift in Sources */,
+				075282EC27AFCCBA00AD827A /* GoogleAds.swift in Sources */,
+				075282EE27AFCF6500AD827A /* HistoryScreen.swift in Sources */,
 				071741AF27AE43690005B008 /* OnBoardingScreen.swift in Sources */,
 				071741B927AE47FF0005B008 /* ViewModule.swift in Sources */,
 				071741C127AE57AC0005B008 /* ModuleStructs.swift in Sources */,

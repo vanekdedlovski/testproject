@@ -47,6 +47,7 @@ class ViewModule : ObservableObject {
                     success()
                 } else {
                     error()
+                    self.error1 = res.error?.localizedDescription ?? ""
                 }
                 
                 

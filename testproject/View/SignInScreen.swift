@@ -96,6 +96,11 @@ struct SignInScreen: View {
                                     .foregroundColor(Color("MyOrange"))
                             )
                     }
+                    Button {
+                        screen = "MainScreen"
+                    } label: {
+                        Text("123432")
+                    }
 
                 }
                 Spacer()

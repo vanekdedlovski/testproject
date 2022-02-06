@@ -6,6 +6,7 @@
 //
 
 import XCTest
+import Network
 
 class testprojectUITests: XCTestCase {
 
@@ -25,7 +26,18 @@ class testprojectUITests: XCTestCase {
     func testExample() throws {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
+        let network = NetworkManager()
         app.launch()
+        
+        let button = app.buttons["noNetwork"]
+        
+        if (network.IsConnect) {
+            XCTAssert(!button.exists)
+        } else {
+            XCTAssert(button.exists)
+            button.tap()
+        }
+        
 
         // Use recording to get started writing UI tests.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
@@ -38,5 +50,21 @@ class testprojectUITests: XCTestCase {
                 XCUIApplication().launch()
             }
         }
+    }
+}
+
+
+class NetworkManager : ObservableObject {
+    let monitor = NWPathMonitor()
+    let queue = DispatchQueue(label: "NetworkCheck")
+    @Published var IsConnect = true
+    init() {
+        monitor.pathUpdateHandler = { path in
+            DispatchQueue.main.async {
+                self.IsConnect = path.status == .satisfied
+            }
+            
+        }
+        monitor.start(queue: queue)
     }
 }

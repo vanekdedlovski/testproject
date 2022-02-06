@@ -30,4 +30,5 @@ struct Dishes : Codable {
     let price : String
     let icon : String
     let version : String
+    var count : Int? = 0
 }

@@ -10,7 +10,11 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var viewModule = ViewModule()
     @StateObject var netWork = Network()
+    @State var currentDish : Dishes?
     @State var screen = "LauchScreen"
+    @State var cart : [Dishes] = []
+    @State var OverlayActive = "home"
+    @State var FullPrice = 0 
     var body: some View {
         if (screen == "LauchScreen") {
             LauchScreen(screen: $screen)
@@ -30,7 +34,19 @@ struct ContentView: View {
                 .environmentObject(netWork)
                 .environmentObject(viewModule)
         } else if (screen == "MainScreen") {
-            MainScreen(screen: $screen)
+            MainScreen(screen: $screen, currentDish: $currentDish, OverlayActive: $OverlayActive, cart: $cart)
+                .environmentObject(viewModule)
+        }
+        else if (screen == "OneitemScreen") {
+            OneItemScreen(currentDish: $currentDish, screen: $screen)
+                .environmentObject(viewModule)
+        }
+        else if (screen == "HistoryScreen") {
+            HistoryScreen(screen: $screen, currentDish: $currentDish, OverlayActive: $OverlayActive, cart: $cart)
+                .environmentObject(viewModule)
+        }
+        else if (screen == "OrderScreen") {
+            OrderScreen(screen: $screen, currentDish: $currentDish, OverlayActive: $OverlayActive, cart: $cart, FullPrice: $FullPrice)
                 .environmentObject(viewModule)
         }
     }

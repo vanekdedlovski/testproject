@@ -89,6 +89,7 @@ struct OnBoardingScreen: View {
                             .foregroundColor(.black)
                             .font(.system(size: 18))
                     }
+                    .accessibilityIdentifier("noNetwork")
                 }
             }
             .padding(.bottom,40)

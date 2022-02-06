@@ -21,6 +21,20 @@ class testprojectTests: XCTestCase {
     func testExample() throws {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        var cart : [Dishes] = [
+            Dishes(dishId: "123", category: "Foods", nameDish: "Test", price: "1000", icon: "", version: "1.0", count: 2),
+            Dishes(dishId: "124", category: "Foods", nameDish: "Test1", price: "2000", icon: "", version: "1.0", count: 1),
+            Dishes(dishId: "125", category: "Foods", nameDish: "Test2", price: "3000", icon: "", version: "1.0", count: 1),
+            Dishes(dishId: "126", category: "Foods", nameDish: "Test3", price: "4000", icon: "", version: "1.0", count: 1)
+        ]
+        var fullPrice = 0
+        
+        for x in cart {
+            fullPrice = fullPrice + Int(x.price ?? "")! * (x.count ?? 0)
+        }
+        
+        XCTAssertEqual(fullPrice, 11000)
     }
 
     func testPerformanceExample() throws {
@@ -30,4 +44,14 @@ class testprojectTests: XCTestCase {
         }
     }
 
+}
+
+struct Dishes : Codable {
+    let dishId : String
+    var category : String
+    let nameDish : String
+    let price : String
+    let icon : String
+    let version : String
+    var count : Int? = 0
 }

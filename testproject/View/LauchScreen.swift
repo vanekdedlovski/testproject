@@ -11,6 +11,7 @@ struct LauchScreen: View {
     @Binding var screen : String
     @EnvironmentObject var netWork : Network
     @EnvironmentObject var viewModule : ViewModule
+    
     var body: some View {
         VStack{
             ZStack {

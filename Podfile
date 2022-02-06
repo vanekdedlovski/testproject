@@ -7,6 +7,7 @@ target 'testproject' do
 
   # Pods for testproject
   pod 'EmailValidator'
+  pod 'Google-Mobile-Ads-SDK'
 
 
   target 'testprojectTests' do
